@@ -55,4 +55,34 @@ describe("In library shop-tools", function() {
       expect(lib.countProducts(products)).to.be.eql(4);
     });
   });
+  describe("function removeFreeArticles()", function() {
+    it("should return empty array with empty array", function() {
+      expect(lib.removeFreeArticles([])).to.be.eql([]);
+    });
+    it("should return the array without free articles", function() {
+      const inputProducts = [
+        "tomato",
+        "cucumber",
+        "tomato",
+        "salad",
+        "potato",
+        "cucumber",
+        "potato",
+        "potato",
+        "tomato",
+        "potato"
+      ];
+      const outputProducts = [
+        "tomato",
+        "cucumber",
+        "tomato",
+        "salad",
+        "potato",
+        "cucumber",
+        "potato",
+        "potato"
+      ];
+      expect(lib.removeFreeArticles(inputProducts)).to.be.eql(outputProducts);
+    });
+  });
 });

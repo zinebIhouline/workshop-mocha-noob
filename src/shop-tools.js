@@ -12,3 +12,18 @@ exports.countArticles = items => items.length;
 exports.countProducts = items =>
   items.reduce((acc, item) => (acc.includes(item) ? acc : [...acc, item]), [])
     .length;
+
+exports.removeFreeArticles = items =>
+  items.reduce(
+    (acc, item) => {
+      if (!acc[item]) {
+        acc[item] = 0;
+      }
+      acc[item]++;
+      if (acc[item] % 3 !== 0) {
+        acc.output.push(item);
+      }
+      return acc;
+    },
+    { output: [] }
+  ).output;
