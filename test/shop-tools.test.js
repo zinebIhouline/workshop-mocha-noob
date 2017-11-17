@@ -85,4 +85,21 @@ describe("In library shop-tools", function() {
       expect(lib.removeFreeArticles(inputProducts)).to.be.eql(outputProducts);
     });
   });
+  describe("function calculateBasket()", function() {
+    it("should return 0 with empty array", function() {
+      expect(lib.calculateBasket([])).to.be.eql(0);
+    });
+    it("should return number of products of an array", function() {
+      const prices = {
+        banana: 1,
+        potato: 2,
+        tomato: 3,
+        cucumber: 4,
+        salad: 5,
+        apple: 6
+      };
+      const products = ["tomato", "cucumber", "salad"];
+      expect(lib.calculateBasket(products, prices)).to.be.eql(12);
+    });
+  });
 });

@@ -27,3 +27,6 @@ exports.removeFreeArticles = items =>
     },
     { output: [] }
   ).output;
+
+exports.calculateBasket = (items, prices) =>
+  items.reduce((acc, item) => acc + prices[item], 0);
