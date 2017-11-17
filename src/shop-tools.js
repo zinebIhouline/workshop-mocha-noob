@@ -6,3 +6,5 @@ exports.getPrices = () => ({
   salad: 5,
   apple: 6
 });
+
+exports.countArticles = items => items.length;

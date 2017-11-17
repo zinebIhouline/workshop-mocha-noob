@@ -15,4 +15,24 @@ describe("In library shop-tools", function() {
       });
     });
   });
+  describe("function countArticles()", function() {
+    it("should return 0 with empty array", function() {
+      expect(lib.countArticles([])).to.be.eql(0);
+    });
+    it("should return length of an array", function() {
+      const products = [
+        "tomato",
+        "cucumber",
+        "tomato",
+        "salad",
+        "potato",
+        "cucumber",
+        "potato",
+        "potato",
+        "tomato",
+        "potato"
+      ];
+      expect(lib.countArticles(products)).to.be.eql(10);
+    });
+  });
 });
