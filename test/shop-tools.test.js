@@ -35,4 +35,24 @@ describe("In library shop-tools", function() {
       expect(lib.countArticles(products)).to.be.eql(10);
     });
   });
+  describe("function countProducts()", function() {
+    it("should return 0 with empty array", function() {
+      expect(lib.countProducts([])).to.be.eql(0);
+    });
+    it("should return number of products of an array", function() {
+      const products = [
+        "tomato",
+        "cucumber",
+        "tomato",
+        "salad",
+        "potato",
+        "cucumber",
+        "potato",
+        "potato",
+        "tomato",
+        "potato"
+      ];
+      expect(lib.countProducts(products)).to.be.eql(4);
+    });
+  });
 });

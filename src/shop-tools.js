@@ -8,3 +8,7 @@ exports.getPrices = () => ({
 });
 
 exports.countArticles = items => items.length;
+
+exports.countProducts = items =>
+  items.reduce((acc, item) => (acc.includes(item) ? acc : [...acc, item]), [])
+    .length;
