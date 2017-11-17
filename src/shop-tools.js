@@ -1,4 +1,4 @@
-exports.getPrices = () => ({
+const getPrices = () => ({
   banana: 1,
   potato: 2,
   tomato: 3,
@@ -7,13 +7,13 @@ exports.getPrices = () => ({
   apple: 6
 });
 
-exports.countArticles = items => items.length;
+const countArticles = items => items.length;
 
-exports.countProducts = items =>
+const countProducts = items =>
   items.reduce((acc, item) => (acc.includes(item) ? acc : [...acc, item]), [])
     .length;
 
-exports.removeFreeArticles = items =>
+const removeFreeArticles = items =>
   items.reduce(
     (acc, item) => {
       if (!acc[item]) {
@@ -28,5 +28,20 @@ exports.removeFreeArticles = items =>
     { output: [] }
   ).output;
 
-exports.calculateBasket = (items, prices) =>
+const calculateBasket = (items, prices) =>
   items.reduce((acc, item) => acc + prices[item], 0);
+
+const summarizeBasket = (items, prices) => ({
+  price: calculateBasket(removeFreeArticles(items), prices),
+  countArticles: countArticles(items),
+  countProducts: countProducts(items)
+});
+
+module.exports = {
+  getPrices,
+  countArticles,
+  countProducts,
+  removeFreeArticles,
+  calculateBasket,
+  summarizeBasket
+};
