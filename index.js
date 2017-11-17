@@ -1,3 +1,3 @@
-let chalk = require('chalk');
+let chalk = require("chalk");
 
-console.log(chalk.green('Hello world'));
+console.log(chalk.green("Hello world"));

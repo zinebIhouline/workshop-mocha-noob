@@ -28,7 +28,7 @@ To start program.
 
 ## Exercises
 
-Please verify that after all exercises the linter should not return errors.
+Please verify that after all exercises the tests and the linter should not return errors.
 
 ### Synopsis
 
@@ -38,11 +38,16 @@ You want to start a business online, so your software should be able to return t
 
 ### Exercise 1
 
-Create a simple test in file **_test/prices.test.js_** and create a file **_prices.js_** to respectively verify and export the prices of the products like this.
+A function +getPrices+ that doesn't take parameter should return an object which describes the prices of your products.
 
 ```javascript
-const prices = { banana: 1, potato: 2, tomato: 3, cucumber: 4, salad: 5, apple: 6 };
+// For example
+console.log(getPrices()) // { banana: 1, potato: 2, tomato: 3, cucumber: 4, salad: 5, apple: 6 }
 ```
+
+Add tests into file **_test/shop-tools.test.js_**. that will verify this assertion.
+
+Add the function +getPrices+ into file **_src/shop-tools.js_**.
 
 :point_right: [function `.eql`](http://chaijs.com/api/bdd/#method_eql) from Chai should help you.
 
@@ -62,13 +67,9 @@ const products = [ 'tomato', 'cucumber', 'tomato', 'salad', 'potato', 'cucumber'
 console.log(countArticles(products)) // 10
 ```
 
-Create a file **_test/shopTools.test.js_**.
+Add tests into file **_test/shop-tools.test.js_**. that will verify this assertion.
 
-Add tests into file **_test/shopTools.test.js_**. that will verify this assertion.
-
-Create a file **_shopTools.js_**.
-
-Add the function +countArticles+ into file **_shopTools.js_**.
+Add the function +countArticles+ into file **_src/shop-tools.js_**.
 
 After finish this exercise, please commit all your files.
 
@@ -86,9 +87,9 @@ const products = [ 'tomato', 'cucumber', 'tomato', 'salad', 'potato', 'cucumber'
 console.log(countProducts(products)) // 4
 ```
 
-Add tests into file **_test/shopTools.test.js_**. that will verify this assertion.
+Add tests into file **_test/shop-tools.test.js_**. that will verify this assertion.
 
-Add the function +countProducts+ into file **_shopTools.js_**.
+Add the function +countProducts+ into file **_src/shop-tools.js_**.
 
 After finish this exercise, please commit all your files.
 
@@ -106,9 +107,9 @@ const products = [ 'tomato', 'cucumber', 'tomato', 'salad', 'potato', 'cucumber'
 console.log(removeFreeArticles(products)) // [ 'tomato', 'cucumber', 'tomato', 'salad', 'potato', 'cucumber', 'potato', 'potato' ]
 ```
 
-Add tests into file **_test/shopTools.test.js_**. that will verify this assertion.
+Add tests into file **_test/shop-tools.test.js_**. that will verify this assertion.
 
-Add the function +removeFreeArticles+ into file **_shopTools.js_**.
+Add the function +removeFreeArticles+ into file **_src/shop-tools.js_**.
 
 After finish this exercise, please commit all your files.
 
@@ -127,9 +128,9 @@ const products = [ 'tomato', 'cucumber', 'salad'];
 console.log(calculateBasket(products, prices)) // 12
 ```
 
-Add tests into file **_test/shopTools.test.js_**. that will verify this assertion.
+Add tests into file **_test/shop-tools.test.js_**. that will verify this assertion.
 
-Add the function +calculateBasket+ into file **_shopTools.js_**.
+Add the function +calculateBasket+ into file **_src/shop-tools.js_**.
 
 After finish this exercise, please commit all your files.
 
@@ -148,9 +149,9 @@ const products = [ 'tomato', 'cucumber', 'tomato', 'salad', 'potato', 'cucumber'
 console.log(summarizeBasket(products, prices)) // { price: 25, countArticles: 10, countProducts: 4 }
 ```
 
-Add tests into file **_test/shopTools.test.js_**. that will verify this assertion.
+Add tests into file **_test/shop-tools.test.js_**. that will verify this assertion.
 
-Add the function +summarizeBasket+ into file **_shopTools.js_**.
+Add the function +summarizeBasket+ into file **_src/shop-tools.js_**.
 
 After finish this exercise, please commit all your files.
 

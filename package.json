@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "test": "mocha",
+    "test": "mocha test/**",
     "lint": "eslint index.js test/**; exit 0"
   },
   "dependencies": {
@@ -19,12 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alvinberthelot/boilerplate-workshops-node-js.git"
+    "url":
+      "git+https://github.com/alvinberthelot/boilerplate-workshops-node-js.git"
   },
   "author": "Alvin Berthelot",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alvinberthelot/boilerplate-workshops-node-js/issues"
+    "url":
+      "https://github.com/alvinberthelot/boilerplate-workshops-node-js/issues"
   },
-  "homepage": "https://github.com/alvinberthelot/boilerplate-workshops-node-js#readme"
+  "homepage":
+    "https://github.com/alvinberthelot/boilerplate-workshops-node-js#readme"
 }
